@@ -125,10 +125,10 @@ const testimonials = [
   {
     testimonial:
       "I thought it was impossible to make a website as beautiful as our product, but Sarim proved me wrong.",
-    names: "Maryam Ahmad",
-    designation: "Instructor",
-    company: "Corvit",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    names: "Waqas Ahmad",
+    designation: "CEO",
+    company: "Andropplelab",
+    image: "https://randomuser.me/api/portraits/men/4.jpg",
   },
   {
     testimonial:
@@ -136,15 +136,15 @@ const testimonials = [
     names: "Muhammad Awais",
     designation: "CEO",
     company: "Code Debuggers",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    image: "https://randomuser.me/api/portraits/men/1.jpg",
   },
   {
     testimonial:
       "After Sarim optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    names: "Iqra Khalid",
-    designation: "Trainer",
-    company: "Tecnsol",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    names: "Hamza Ali",
+    designation: "CEO",
+    company: "FA Tech & Solutions",
+    image: "https://randomuser.me/api/portraits/men/5.jpg",
   },
 ];
 
