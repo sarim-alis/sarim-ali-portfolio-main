@@ -32,6 +32,7 @@ import codedb from "./company/codedb.jfif";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import swift from "./swift.png";
 
 export {
   logo,
@@ -64,4 +65,5 @@ export {
   lab,
   fa,
   codedb,
+  swift,
 };

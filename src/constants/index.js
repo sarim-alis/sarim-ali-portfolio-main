@@ -14,7 +14,8 @@ import {
   chatapp,
   lab,
   codedb,
-  fa
+  fa,
+  swift
 } from "../assets";
 
 export const navLinks = [
@@ -171,25 +172,25 @@ const projects = [
     source_code_link: "https://github.com/sarimuchihaa/sarim-chat-app",
   },
   {
-    names: "Job IT",
+    names: "Swift Buy",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Developed ecommerce store designed for online shopping with clert auth. Integrated admin panel with prisma to enable product management and the real-time order tracking.",
     tags: [
       {
         names: "react",
         color: "blue-text-gradient",
       },
       {
-        names: "restapi",
+        names: "prisma",
         color: "green-text-gradient",
       },
       {
-        names: "scss",
+        names: "clerk",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    live_link: "https://sarim-chat-app.onrender.com",
+    image: swift,
+    live_link: "https://swift-buy-gray.vercel.app",
     source_code_link: "https://github.com/",
   },
   {
