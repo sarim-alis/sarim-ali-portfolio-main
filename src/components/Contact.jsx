@@ -24,35 +24,68 @@ const Contact = () => {
     setForm({ ...form, [name]: value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setLoading(true);
 
-    emailjs.send(
-      'service_jdnc1u9',
-      'template_6k8hnk7',
-      {
-        from_name: form.name,
-        to_name: "Sarim",
-        from_email: form.email,
-        to_email: "sarimslayerali786@gmail.com",
-        message: form.message,
-      },
-      'XxWt0FnUb2QPHjiGk'
-    )
-      .then(() => {
-        setLoading(false);
-        alert("Thank you. I will get back to you as soon as possible.");
-        setForm({
-          name: "",
-          email: "",
-          message: "",
-        });
-      }, (error) => {
-        console.error(error);
-        alert("Thank you. I will get back to you as soon as possible.");
+  //   emailjs.send(
+  //     'service_jdnc1u9',
+  //     'template_6k8hnk7',
+  //     {
+  //       from_name: form.name,
+  //       to_name: "Sarim",
+  //       from_email: form.email,
+  //       to_email: "sarimslayerali786@gmail.com",
+  //       message: form.message,
+  //     },
+  //     'XxWt0FnUb2QPHjiGk'
+  //   )
+  //     .then(() => {
+  //       setLoading(false);
+  //       alert("Thank you. I will get back to you as soon as possible.");
+  //       setForm({
+  //         name: "",
+  //         email: "",
+  //         message: "",
+  //       });
+  //     }, (error) => {
+  //       console.error(error);
+  //       alert("Thank you. I will get back to you as soon as possible.");
+  //     });
+  // };
+
+  const handleSubmit = (e) => {
+  e.preventDefault();
+  setLoading(true);
+
+  emailjs.send(
+    "service_jdnc1u9",
+    "template_6k8hnk7",
+    {
+      from_name: form.name,
+      to_name: "Sarim",
+      from_email: form.email,
+      to_email: "sarimslayerali786@gmail.com",
+      message: form.message,
+    },
+    "XxWt0FnUb2QPHjiGk"
+  )
+    .then(() => {
+      alert("Thank you. I will get back to you as soon as possible.");
+    })
+    .catch((error) => {
+      console.error(error);
+      alert("Thank you. I will get back to you as soon as possible.");
+    })
+    .finally(() => {
+      setLoading(false);
+      setForm({
+        name: "",
+        email: "",
+        message: "",
       });
-  };
+    });
+};
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
@@ -106,7 +139,7 @@ const Contact = () => {
             type="submit"
             className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
           >
-            {loading ? 'Sending...' : 'Send'}
+            {loading ? 'Send' : 'Send'}
           </button>
         </form>
       </motion.div>
