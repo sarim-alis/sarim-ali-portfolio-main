@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser';
 import { styles } from '../styles';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from "../utils/motion";
+import Toast from "./Toast";
 
 // XxWt0FnUb2QPHjiGk
 // template_6k8hnk7
@@ -18,6 +19,15 @@ const Contact = () => {
     message: '',
   });
   const [loading, setLoading] = useState(false);
+  const [toast, setToast] = useState({ isVisible: false, message: "", type: "success" });
+
+  const showToast = (message, type = "success") => {
+    setToast({ isVisible: true, message, type });
+  };
+
+  const closeToast = () => {
+    setToast({ ...toast, isVisible: false });
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -71,11 +81,11 @@ const Contact = () => {
     "XxWt0FnUb2QPHjiGk"
   )
     .then(() => {
-      alert("Thank you. I will get back to you as soon as possible.");
+      showToast("Thank you. I will get back to you as soon as possible.", "success");
     })
     .catch((error) => {
       console.error(error);
-      alert("Thank you. I will get back to you as soon as possible.");
+      showToast("Thank you. I will get back to you as soon as possible.", "success");
     })
     .finally(() => {
       setLoading(false);
@@ -88,7 +98,9 @@ const Contact = () => {
 };
 
   return (
-    <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
+    <>
+      <Toast message={toast.message} type={toast.type} isVisible={toast.isVisible} onClose={closeToast} />
+      <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
       <motion.div
         variants={slideIn('left', 'tween', 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
@@ -150,6 +162,7 @@ const Contact = () => {
       >
       </motion.div>
     </div>
+    </>
   );
 };
 

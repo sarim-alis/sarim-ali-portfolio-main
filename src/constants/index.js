@@ -141,7 +141,7 @@ const testimonials = [
   {
     testimonial:
       "After Sarim optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    names: "Hamza Ali",
+    names: "Ahmad Ali",
     designation: "CEO",
     company: "FA Tech & Solutions",
     image: "https://randomuser.me/api/portraits/men/5.jpg",
@@ -168,8 +168,8 @@ const projects = [
       },
     ],
     image: chatapp,
-    live_link: "https://sarim-chat-app.onrender.com",
-    source_code_link: "https://github.com/sarimuchihaa/sarim-chat-app",
+    live_link: "https://sarim-chat-apps.onrender.com",
+    source_code_link: "https://github.com/sarim-alis/sarim-chat-app",
   },
   {
     names: "Swift Buy",
@@ -191,7 +191,7 @@ const projects = [
     ],
     image: swift,
     live_link: "https://swift-buy-gray.vercel.app",
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/sarim-alis/chat-app",
   },
   {
     names: "Trip Guide",

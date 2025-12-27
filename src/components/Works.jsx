@@ -6,8 +6,9 @@ import { github, live } from '../assets';
 import { SectionWrapper } from '../hoc';
 import { projects } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
+import { useState } from 'react';
 
-const ProjectCard = ({index, names, description, tags, image, live_link}) => {
+const ProjectCard = ({index, names, description, tags, image, live_link, source_code_link}) => {
   return (
     <motion.div variants={fadeIn("up","spring", index * 0.5, 0.75)}>
       <Tilt
@@ -27,7 +28,7 @@ const ProjectCard = ({index, names, description, tags, image, live_link}) => {
 
             <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
               <div
-               onClick={() => window.open(live_link, "_blank")}
+               onClick={(e) => { if (index === 2) { e.stopPropagation(); return; } window.open(live_link, "_blank") }}
                className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
                >
                 <img
@@ -36,8 +37,8 @@ const ProjectCard = ({index, names, description, tags, image, live_link}) => {
                 className='w-1/2 h-1/2'
                 />
                </div>
-               {/* <div
-               onClick={() => window.open(source_code_link, "_blank")}
+               <div
+               onClick={(e) => { if (index === 2) { e.stopPropagation(); return; } window.open(source_code_link, "_blank") }}
                className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
                >
                 <img
@@ -45,7 +46,7 @@ const ProjectCard = ({index, names, description, tags, image, live_link}) => {
                 alt='github'
                 className='w-1/2 h-1/2'
                 />
-               </div> */}
+               </div>
             </div>
           </div>
 
@@ -70,6 +71,13 @@ const ProjectCard = ({index, names, description, tags, image, live_link}) => {
 }
 
 const Works = () => {
+  const [toast, setToast] = useState({ visible: false, message: '' });
+
+  const showToast = (message) => {
+    setToast({ visible: true, message });
+    setTimeout(() => setToast({ visible: false, message: '' }), 2500);
+  };
+
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -100,9 +108,16 @@ const Works = () => {
             key={`project-${index}`}
             index={index}
             {...project}
+            showToast={showToast}
           />
         ))}
       </div>
+
+      {toast.visible && (
+        <div className='fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-black/80 text-white py-2 px-4 rounded-md text-sm z-50'>
+          {toast.message}
+        </div>
+      )}
     </>
   )
 }
