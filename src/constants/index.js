@@ -191,7 +191,7 @@ const projects = [
     ],
     image: swift,
     live_link: "https://swift-buy-gray.vercel.app",
-    source_code_link: "https://github.com/sarim-alis/chat-app",
+    source_code_link: "https://github.com/sarim-alis/swift-buy",
   },
   {
     names: "Trip Guide",
