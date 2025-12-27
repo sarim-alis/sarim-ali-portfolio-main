@@ -141,7 +141,7 @@ const testimonials = [
   {
     testimonial:
       "After Sarim optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    names: "Ahmad Ali",
+    names: "Ahmad Sarwar",
     designation: "CEO",
     company: "FA Tech & Solutions",
     image: "https://randomuser.me/api/portraits/men/5.jpg",
