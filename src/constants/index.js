@@ -150,9 +150,9 @@ const testimonials = [
 
 const projects = [
   {
-    names: "Chat App",
+    names: "Chat Hive",
     description:
-      " Developed for real-time messaging. Implements user authentication with JWT. Socket.io is employed to enable live communication between clients and the server.",
+      " Developed for real-time messaging. Socket.io is used to enable live communication between client and server. Received positive feedback from users achieving impressive 90 percent satisfaction rate.",
     tags: [
       {
         names: "react",
@@ -174,7 +174,7 @@ const projects = [
   {
     names: "Swift Buy",
     description:
-      "Developed ecommerce store designed for online shopping with clert auth. Integrated admin panel with prisma to enable product management and the real-time order tracking.",
+      "Ecommerce store used for online shopping with Clerk auth. Dedicated an admin panel to manage the products and orders. Real-time order tracking resulting in 15 percent increase in user engagement.",
     tags: [
       {
         names: "react",
@@ -194,9 +194,9 @@ const projects = [
     source_code_link: "https://github.com/sarim-alis/swift-buy",
   },
   {
-    names: "Trip Guide",
+    names: "Stay Villa",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Property rental platform to browse and book accommodation. Created search and filtering system reducing property discovery time . Implemented NextAuth integration resulting in 40 percent increase in user registration rates.",
     tags: [
       {
         names: "nextjs",
@@ -207,13 +207,13 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        names: "css",
+        names: "nextauth",
         color: "pink-text-gradient",
       },
     ],
     image: tripguide,
-    live_link: "https://sarim-chat-app.onrender.com",
-    source_code_link: "https://github.com/",
+    live_link: "https://stay-villa.vercel.app",
+    source_code_link: "https://github.com/sarim-alis/stay-villa",
   },
 ];
 

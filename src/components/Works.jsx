@@ -28,7 +28,7 @@ const ProjectCard = ({index, names, description, tags, image, live_link, source_
 
             <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
               <div
-               onClick={(e) => { if (index === 2) { e.stopPropagation(); return; } window.open(live_link, "_blank") }}
+               onClick={(e) => {if (!live_link) {e.preventDefault(); return;} window.open(live_link, "_blank");}}
                className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
                >
                 <img
@@ -37,8 +37,8 @@ const ProjectCard = ({index, names, description, tags, image, live_link, source_
                 className='w-1/2 h-1/2'
                 />
                </div>
-               <div
-               onClick={(e) => { if (index === 2) { e.stopPropagation(); return; } window.open(source_code_link, "_blank") }}
+              <div 
+               onClick={(e) => {if (!source_code_link) {e.preventDefault(); return;} window.open(source_code_link, "_blank");}}
                className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
                >
                 <img
