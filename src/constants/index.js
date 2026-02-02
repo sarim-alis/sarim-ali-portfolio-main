@@ -177,7 +177,7 @@ const projects = [
       "Ecommerce store used for online shopping with Clerk auth. Dedicated an admin panel to manage the products and orders. Real-time order tracking resulting in 15 percent increase in user engagement.",
     tags: [
       {
-        names: "react",
+        names: "nextjs",
         color: "blue-text-gradient",
       },
       {
@@ -196,7 +196,7 @@ const projects = [
   {
     names: "Stay Villa",
     description:
-      "Property rental platform to browse and book accommodation. Created search and filtering system reducing property discovery time . Implemented NextAuth integration resulting in 40 percent increase in user registration rates.",
+      "Property rental platform to browse and book accommodation. Created search and filtering system reducing property discovery time. Implemented NextAuth integration resulting in 40 percent increase in user registration rates.",
     tags: [
       {
         names: "nextjs",
