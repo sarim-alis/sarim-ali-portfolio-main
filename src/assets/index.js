@@ -27,6 +27,7 @@ import tecnsol from "./company/tecnsol.png";
 import lab from "./company/lab.jfif";
 import fa from "./company/fa.jfif";
 import codedb from "./company/codedb.jfif";
+import couve from "./company/couve.jpg";
 
 
 import carrent from "./carrent.png";
@@ -66,4 +67,5 @@ export {
   fa,
   codedb,
   swift,
+  couve,
 };

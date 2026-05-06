@@ -15,7 +15,8 @@ import {
   lab,
   codedb,
   fa,
-  swift
+  swift,
+  couve
 } from "../assets";
 
 export const navLinks = [
@@ -108,8 +109,8 @@ const experiences = [
   },
   {
     title: "Full Stack Developer",
-    company_name: "Andropplelab",
-    icon: lab,
+    company_name: "Couve Stack",
+    icon: couve,
     iconBg: "white",
     date: "Oct 2024 - Present",
     points: [
@@ -127,7 +128,7 @@ const testimonials = [
       "I thought it was impossible to make a website as beautiful as our product, but Sarim proved me wrong.",
     names: "Waqas Ahmad",
     designation: "CEO",
-    company: "Andropplelab",
+    company: "Couve Stack",
     image: "https://randomuser.me/api/portraits/men/4.jpg",
   },
   {
