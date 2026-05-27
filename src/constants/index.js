@@ -213,8 +213,8 @@ const projects = [
       },
     ],
     image: tripguide,
-    live_link: "https://stay-villa.vercel.app",
-    source_code_link: "https://github.com/sarim-alis/stay-villa",
+    live_link: "https://stay-villas-zaw5.vercel.app/",
+    source_code_link: "https://github.com/sarim-alis/stay-villas",
   },
 ];
 
