@@ -220,7 +220,7 @@ const projects = [
   {
     names: "Sprint Craft",
     description:
-      "AI-powered kanban for sprint planning. Gemini turns a one-line goal into a prioritized backlog, with task breakdown and sprint summaries. Real-time collaboration via Socket.io and drag-and-drop boards on PostgreSQL.",
+      "AI-powered kanban board for sprint planning. Implemented AI to turn a one-line goal into a prioritized backlog, with task breakdown and sprint summaries. Real-time collaboration via Socket.io and drag-and-drop boards on PostgreSQL.",
     tags: [
       {
         names: "express",
@@ -231,7 +231,7 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        names: "gemini",
+        names: "websockets",
         color: "pink-text-gradient",
       },
     ],
