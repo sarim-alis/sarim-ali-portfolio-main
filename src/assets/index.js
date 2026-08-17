@@ -7,6 +7,7 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 import live from "./live.png";
+import video from "./video.svg";
 import chatapp from "./chatapp.jpg";
 
 import javascript from "./tech/javascript.png";
@@ -63,6 +64,7 @@ export {
   digital,
   tecnsol,
   live,
+  video,
   chatapp,
   lab,
   fa,

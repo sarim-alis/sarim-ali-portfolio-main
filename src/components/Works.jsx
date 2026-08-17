@@ -2,13 +2,13 @@ import Tilt from 'react-parallax-tilt';
 import { motion } from 'framer-motion';
 
 import { styles } from '../styles';
-import { github, live } from '../assets';
+import { github, live, video } from '../assets';
 import { SectionWrapper } from '../hoc';
 import { projects } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
 import { useState } from 'react';
 
-const ProjectCard = ({index, names, description, tags, image, live_link, source_code_link}) => {
+const ProjectCard = ({index, names, description, tags, image, live_link, source_code_link, video_link}) => {
   return (
     <motion.div variants={fadeIn("up","spring", index * 0.5, 0.75)}>
       <Tilt
@@ -26,7 +26,7 @@ const ProjectCard = ({index, names, description, tags, image, live_link, source_
              className='w-full h-full object-cover rounded-2xl'
             />
 
-            <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
+            <div className='absolute inset-0 flex justify-end gap-2 m-3 card-img_hover'>
               <div
                onClick={(e) => {if (!live_link) {e.preventDefault(); return;} window.open(live_link, "_blank");}}
                className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
@@ -44,6 +44,16 @@ const ProjectCard = ({index, names, description, tags, image, live_link, source_
                 <img
                 src={github}
                 alt='github'
+                className='w-1/2 h-1/2'
+                />
+               </div>
+              <div
+               onClick={(e) => {if (!video_link) {e.preventDefault(); return;} window.open(video_link, "_blank");}}
+               className={`black-gradient w-10 h-10 rounded-full flex justify-center items-center ${video_link ? 'cursor-pointer' : 'cursor-not-allowed opacity-50'}`}
+               >
+                <img
+                src={video}
+                alt='video'
                 className='w-1/2 h-1/2'
                 />
                </div>

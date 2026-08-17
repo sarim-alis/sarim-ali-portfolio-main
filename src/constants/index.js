@@ -238,6 +238,7 @@ const projects = [
     image: sprintcraft,
     live_link: "https://sprint-craft.vercel.app",
     source_code_link: "https://github.com/sarim-alis/sprint-craft",
+    video_link: "https://drive.google.com/file/d/1v51K4hS-sqbA0LwdpL9nMvD_n5Hb_2tp/view?usp=sharing",
   },
 ];
 
