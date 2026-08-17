@@ -16,7 +16,8 @@ import {
   codedb,
   fa,
   swift,
-  couve
+  couve,
+  sprintcraft,
 } from "../assets";
 
 export const navLinks = [
@@ -215,6 +216,28 @@ const projects = [
     image: tripguide,
     live_link: "https://stay-villas-zaw5.vercel.app/",
     source_code_link: "https://github.com/sarim-alis/stay-villas",
+  },
+  {
+    names: "Sprint Craft",
+    description:
+      "AI-powered kanban for sprint planning. Gemini turns a one-line goal into a prioritized backlog, with task breakdown and sprint summaries. Real-time collaboration via Socket.io and drag-and-drop boards on PostgreSQL.",
+    tags: [
+      {
+        names: "express",
+        color: "blue-text-gradient",
+      },
+      {
+        names: "postgresql",
+        color: "green-text-gradient",
+      },
+      {
+        names: "gemini",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: sprintcraft,
+    live_link: "https://sprint-craft.vercel.app",
+    source_code_link: "https://github.com/sarim-alis/sprint-craft",
   },
 ];
 
